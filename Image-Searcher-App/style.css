@@ -1,0 +1,132 @@
+/* Google Fonts dahil ediliyor */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+/* Tüm öğeler için sıfır kenar boşluğu ve kutu modeli tanımı */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+
+/* Sayfa genelinde varsayılan satır yüksekliği ayarı */
+body {
+    line-height: 1.6;
+}
+
+/* Başlık stil tanımlamaları */
+h1 {
+    font-size: 36px; /* Font büyüklüğü */
+    font-weight: bold; /* Kalınlık */
+    text-align: center; /* Metin hizalaması */
+    margin: 40px 0 60px 0; /* Dış boşluk (üst-sağ-alt-sol) */
+}
+
+/* Arama formu stil tanımlamaları */
+form {
+    display: flex; /* Yatay hizalama */
+    justify-content: center; /* Yatayda merkez hizalama */
+    align-items: center; /* Dikeyde merkez hizalama */
+    margin-bottom: 60px; /* Alt boşluk */
+}
+
+/* Arama kutusu stil tanımlamaları */
+#search-input {
+    width: 60%; /* Genişlik */
+    max-width: 400px; /* Maksimum genişlik */
+    padding: 10px 20px; /* İç boşluklar */
+    border: none; /* Sınır yok */
+    box-shadow: 0 0 6px rgb(0, 0, 0.2); /* Gölge efekti */
+    border-radius: 5px; /* Köşe yuvarlama */
+    font-size: 18px; /* Font büyüklüğü */
+    color: #333; /* Metin rengi */
+}
+
+/* Arama butonu stil tanımlamaları */
+#search-button {
+    padding: 10px 20px; /* İç boşluklar */
+    background-color: #138065; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+    border: none; /* Sınır yok */
+    font-size: 18px; /* Font büyüklüğü */
+    box-shadow: 0 0 6px rgb(0, 0, 0.2); /* Gölge efekti */
+    cursor: pointer; /* İşaretçi tipi değiştirme */
+    border-radius: 5px; /* Köşe yuvarlama */
+    margin-left: 10px; /* Sol boşluk */
+}
+
+/* Arama sonuçları alanı stil tanımlamaları */
+.search-results {
+    display: flex; /* Yatay düzen */
+    justify-content: space-between; /* Aralarında boşluk bırakarak hizalama */
+    flex-wrap: wrap; /* Yeni satıra geçme */
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto; /* Otomatik yatay hizalama */
+}
+
+/* Tek bir arama sonucu kutusu stil tanımlamaları */
+.search-result {
+    margin-bottom: 60px; /* Alt boşluk */
+    width: 30%; /* Genişlik */
+    height: 100%; /* Yükseklik */
+    border-radius: 5%; /* Köşe yuvarlama */
+    box-shadow: 0 0 6px rgb(0, 0, 0.2); /* Gölge efekti */
+    overflow: hidden; /* Taşan içerikleri gizleme */
+}
+
+/* Arama sonucu resmi stil tanımlamaları */
+.search-result img {
+    width: 100%; /* Genişlik */
+    height: 100%; /* Yükseklik */
+    object-fit: cover; /* Resmi kutunun içine sığdırma */
+    transition: opacity 0.2s ease-in-out; /* Opaklık geçişi */
+}
+
+/* Fare üzerine gelindiğinde resmin opaklık ayarı */
+.search-result:hover img {
+    opacity: 0.8; /* Opaklık */
+}
+
+/* Resim açıklama bağlantısı stil tanımlamaları */
+.search-result a {
+    font-size: 20px; /* Font büyüklüğü */
+    text-decoration: none; /* Alt çizgi yok */
+    color: #333; /* Metin rengi */
+    display: block; /* Blok düzenleme */
+    padding: 10px; /* İç boşluklar */
+    text-transform: capitalize; /* Metin biçimini baş harfler büyük olacak şekilde düzenleme */
+}
+
+/* "Daha Fazla Göster" butonu stil tanımlamaları */
+#show-more-button {
+    background-color: #008cba; /* Arka plan rengi */
+    font-size: 18px; /* Font büyüklüğü */
+    border: none; /* Sınır yok */
+    color: #fff; /* Metin rengi */
+    padding: 10px 20px; /* İç boşluklar */
+    text-align: center; /* Metin hizalaması */
+    display: block; /* Blok düzenleme */
+    margin: 30px auto; /* Dış boşluklar (üst-alt) otomatik hizalama */
+    border-radius: 5px; /* Köşe yuvarlama */
+    cursor: pointer; /* İşaretçi tipi değiştirme */
+    display: none; /* Görünmez başlangıçta */
+}
+
+/* Ekran boyutlarına göre düzenlemeler */
+@media screen and (max-width: 768px) {
+    /* 768px'ye kadar ekran genişliği için ayarlamalar */
+    .search-results {
+        padding: 20px; /* İç boşluklar */
+    }
+    .search-result {
+        padding: 45%; /* Yüzde cinsinden iç boşluklar */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* 480px'ye kadar ekran genişliği için ayarlamalar */
+    .search-result {
+        width: 100%; /* Genişlik */
+    }
+    /* Diğer ekran boyutlarına göre düzenlemeler */
+}
